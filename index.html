@@ -2,168 +2,209 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    body {
-      background: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902') no-repeat center center / cover;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902') no-repeat center center / cover;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
 
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: -1;
-    }
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
 
-    .navbar,
-    .footer {
-      background-color: rgba(0, 0, 0, 0.5) !important;
-      backdrop-filter: blur(5px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+        .navbar,
+        .footer {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    .navbar-brand {
-      font-size: 30px;
-      font-weight: bold;
-      color: #fff !important;
-    }
+        .navbar-brand {
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff !important;
+        }
 
-    .nav-link {
-      color: #fff !important;
-      font-weight: 500;
-    }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
 
-    h2.section-title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      color: #ffffff;
-      border-bottom: 2px solid #ffffff20;
-      display: inline-block;
-    }
+        h2.section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff20;
+            display: inline-block;
+        }
 
-    .skills i {
-      font-size: 2.5rem;
-      margin: 0.5rem;
-    }
+        .skills i {
+            font-size: 2.5rem;
+            margin: 0.5rem;
+        }
 
-    .card {
-      background-color: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      border: none;
-      transition: transform 0.3s ease;
-    }
+        .card {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: none;
+            transition: transform 0.3s ease;
+        }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #ffffff55;
-      object-fit: cover;
-      box-shadow: 0 0 10px #000;
-    }
-  </style>
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #ffffff55;
+            object-fit: cover;
+            box-shadow: 0 0 10px #000;
+        }
+
+        a, a:hover {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 
-  <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
-    <div class="container">
-      <a class="navbar-brand" href="#">MyPortfolio</a>
-      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
-        <i class="fas fa-bars text-white fs-4"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarLinks">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-home me-1"></i> About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-user me-1"></i> Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-code me-1"></i> Projects</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- About -->
-  <section id="about" class="container my-5">
-    <div class="glass">
-      <h2 class="section-title">About Me</h2>
-      <div class="row mt-4 align-items-center">
-        <div class="col-md-3 text-center">
-          <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Profile Photo" class="profile-img">
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 py-2">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./code.png" alt="Logo Png" style="height:40px; width:40px;">&nbsp;Devloper</a>
+            <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarLinks">
+                <i class="fas fa-bars text-white fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarLinks">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-home me-1"></i> About</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-user me-1"></i> Skills</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-code me-1"></i>
+                            Projects</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-9">
-          <p class="fs-5">
-            Hello! I'm a passionate web developer with experience in building dynamic full-stack applications using modern technologies like JavaScript, Node.js, Express, and MongoDB. I love creating engaging and efficient web experiences.
-          </p>
+    </nav>
+
+    <!-- About -->
+    <section id="about" class="container my-5">
+        <div class="glass">
+            <h2 class="section-title">About Me</h2>
+            <div class="row mt-4 align-items-center">
+                <div class="col-md-9">
+                    <p class="fs-5">
+                        Hello! My name is <b>Hemant</b>. I'm a fresher in web development with moderate experience in building
+                        dynamic full-stack applications using modern technologies like JavaScript, Node.js, Express, and
+                        MongoDB. I learning more about creating engaging and efficient web experiences 😁.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="container my-5">
-    <div class="glass">
-      <h2 class="section-title">Skills</h2>
-      <div class="row text-center mt-4 skills">
-        <div class="col"><i class="fab fa-html5 text-danger"></i><p>HTML5</p></div>
-        <div class="col"><i class="fab fa-css3-alt text-primary"></i><p>CSS3</p></div>
-        <div class="col"><i class="fab fa-js text-warning"></i><p>JavaScript</p></div>
-        <div class="col"><i class="fab fa-react text-info"></i><p>React</p></div>
-        <div class="col"><i class="fab fa-bootstrap text-purple"></i><p>Bootstrap</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="container my-5">
-    <div class="glass">
-      <h2 class="section-title">Projects</h2>
-      <div class="row mt-4">
-        <div class="col-md-6 mb-4">
-          <div class="card p-3">
-            <h5 class="card-title">Personal Portfolio</h5>
-            <p class="card-text">A fully responsive personal website to showcase my skills and projects using HTML, CSS, Bootstrap, and JavaScript.</p>
-          </div>
+    <!-- Skills -->
+    <section id="skills" class="container my-5">
+        <div class="glass">
+            <h2 class="section-title">Skills</h2>
+            <div class="row text-center mt-4 skills">
+                <div class="col"><i class="fab fa-html5 text-danger"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="col"><i class="fab fa-css3-alt text-primary"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="col"><i class="fab fa-js text-warning"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="col"><i class="fab fa-react text-info"></i>
+                    <p>React.js</p>
+                </div>
+                <div class="col"><i class="fab fa-node text-success"></i>
+                    <p>Node.js</p>
+                </div>
+                <div class="col"><i class="fab fa-bootstrap" style="color: rgb(168, 5, 255);"></i>
+                    <p>Bootstrap</p>
+                </div>
+                <div class="col"><i class="fa fa-database text-success"></i>
+                    <p>MongoDB</p>
+                </div>     
+            </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="card p-3">
-            <h5 class="card-title">Discord Bot</h5>
-            <p class="card-text">Built a feature-rich Discord bot with slash commands, role management, and admin control using Discord.js and MongoDB.</p>
-          </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container my-5">
+        <div class="glass">
+            <h2 class="section-title">Projects</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5 class="card-title">Personal Portfolio</h5>
+                        <p class="card-text">A responsive GitHub Hosted Page to showcase my Skills and Projects
+                            using HTML, CSS, Bootstrap.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5 class="card-title">Discord Semi-Moderator Bot (In Development)</h5>
+                        <p class="card-text">Learning Discord.js by building a Discord bot with slash commands, role management, and
+                            admin control.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5 class="card-title">A Website Platform For Creators (In Development)</h5>
+                        <p class="card-text">Building a userfriendly Website for the YouTube creators so they can grow togather. (They need to interact
+                            and check out others content in order to grow themselves, Will add their content through YouTube Embedding so they will get realtime views)</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3">
+                        <h5 class="card-title">A Website for YouTube Channel (In Development)</h5>
+                        <p class="card-text">Building a full-stack website for youtube creator to showcase his content. 
+                            Check website 👉🏻<a href="https://noobshantu.onrender.com">here</a>👈🏻. This website is responsive for many modern devices 
+                            and also has hamburger menu and slight ui changes for mobile devices. It is still in development and also supports Google Login.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer text-center text-light py-3">
-    <small>© 2025 My Portfolio | Built with ❤️</small>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer text-center text-light py-3">
+        <small>© 2025 My Portfolio | Built with ❤️</small>
+    </footer>
 
-  <!-- Bootstrap Script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
